@@ -1,0 +1,30 @@
+.notable_block{
+	display: none;
+	background:rgba(235,235,235,0.8);
+	border-radius: 5px;
+	width: 200px;
+	padding: 10px;
+}
+.notable_block.active{
+	display:block;
+}
+
+.notable_highlight{
+	background-color: #FFF295;
+	padding:10px;
+}
+
+.notable_highlight:hover{
+	cursor: pointer;
+}
+
+.notable_blockimg{
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.notable_block h1{
+	font-size: 15px;
+}

@@ -5,6 +5,8 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width">
 	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/notable.css" rel="stylesheet">
+
 	<title>Notable</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
 	<!-- form for inputs -->
 	<form id = 'form'>
 		<div class = 'heading block'>
-			<span>Headline</span><input class = 'inputbox' maxlength="60" type="text" id ="heading" value="">
+			<span>Headline</span><input class = 'inputbox' type="text" id ="heading" value="">
 		</div>
 		<div class = 'media block'>
 			<span>Media</span><input class = 'inputbox' type="text" id ="media" value="">
@@ -30,21 +32,34 @@
 			<span>Highlight text</span><input class = 'inputbox' type="text" id ="highlight" value="">
 		</div>
 		<div id = 'submit'>Submit</div>
+
+
+
 	</form>
 	<!-- area for sample -->
+	<div id = 'sample-space' class = 'subheading'>
+		<h2>Sample area begins below</h2>
+	</div>
 	<div id = 'sample'>
 	</div>
 	<!-- templates start here -->
-	<script type="text/jst" id ="scenario-template">
-		<div id = "<%= scenario_name %>" class = "scenario">
-			<div class = "figure"><%= addComma(figure) %></div>
-			<div class = "desc"><%= desc %></div>
-			<div id="slider-<%= scenario_name %>" data-which="<%= scenario_name %>" data-used = 0 data-value = 0 data-print = 0 class = 'valueslider'></div>
+	<script type="text/jst" id ="embed-highlight">
+		
+	</script>
+	<script type="text/jst" id ="embed-tooltip">
+	<span class = "notable_highlight" data-which = '<%= generated_id %>'> <%= highlight %>
+		</span>
+		<div class = 'notable_block'  data-which = '<%= generated_id %>'>
+			<h1><%= heading %></h1>
+			<img class = 'notable_blockimg' src='<%= media %>'>
+			<p><%= desc %></p>
 		</div>
 	</script>
 
 	<script type="text/javascript" src="js/thirdparty/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/thirdparty/underscore.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/notable.app.js"></script>
 
 </body>
 </html>

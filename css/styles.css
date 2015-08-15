@@ -10,6 +10,10 @@ span{
 	padding: 10px;
 }
 
+.subheading {
+	padding: 2em;
+}
+
 #header{
 	background-color: #FFD516;
 	width: 100%;
@@ -25,8 +29,15 @@ span{
 	padding: 10px;
 }
 
+
 input{
 	height: 2.5em;
+	width: 20em
+}
+
+input,textarea{
+	font-size: 12px;
+	padding: 3px;
 }
 
 input:focus , textarea#desc:focus{ 
@@ -34,7 +45,7 @@ input:focus , textarea#desc:focus{
 	outline: none;
 }
 
-textarea#desc{
+textarea{
 	width: 220px;
 	height: 100px;
 	resize: none;
@@ -60,4 +71,8 @@ textarea#desc{
 #form{
 	padding-left: 2em;
 	padding-top: 2em;
+}
+
+#sample{
+	padding: 2em;
 }

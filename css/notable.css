@@ -11,7 +11,7 @@
 	margin: 0;
 }
 .notable_block.active{
-	display: inline
+	display: inline-block
 }
 
 .notable_highlight{

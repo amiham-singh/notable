@@ -4,6 +4,7 @@
 	border-radius: 5px;
 	width: 200px;
 	padding: 5px;
+	margin: 0;
 }
 .notable_block.active{
 	display:block;
@@ -27,4 +28,8 @@
 
 .notable_block h1{
 	font-size: 15px;
+}
+
+.notable_center{
+	text-align: center;
 }

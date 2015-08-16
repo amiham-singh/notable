@@ -15,16 +15,16 @@
 		var highlight_height = $(this).height()
 		var highlight_width = $(this).width()
 
-		if ((pos.left-tooltip_width/2)<0){
+		if ((pos.left-highlight_width/2)<0){
 			$('.notable_block[data-which='+x+']').css({
-		        top: pos.top+highlight_height/2-tooltip_height/2 ,
+		        top: pos.top+(highlight_height/2)-(tooltip_height/2) ,
 		        left: pos.left+highlight_width+bufferx ,
 		        position: 'absolute'
 		    });
 		} else {
 		$('.notable_block[data-which='+x+']').css({
 		        top: pos.top+highlight_height+buffery,
-		        left: pos.left+highlight_width/2 ,
+		        left: pos.left+(highlight_height/2)-(tooltip_width/2),
 		        position: 'absolute'
 		    });
 		}

@@ -23,7 +23,7 @@
 		    });
 		} else {
 		$('.notable_block[data-which='+x+']').css({
-		        top: pos.top+highlight_height+tooltip_height / 2 - buffery,
+		        top: pos.top+highlight_height+buffery,
 		        left: pos.left-tooltip_width/2 ,
 		        position: 'absolute'
 		    });

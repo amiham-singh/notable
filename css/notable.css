@@ -11,7 +11,7 @@
 	margin: 0;
 }
 .notable_block.active{
-	display:block;
+	display: inline
 }
 
 .notable_highlight{

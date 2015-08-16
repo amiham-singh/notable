@@ -24,7 +24,7 @@
 		} else {
 		$('.notable_block[data-which='+x+']').css({
 		        top: pos.top+highlight_height+buffery,
-		        left: pos.left+tooltip_width/2 ,
+		        left: pos.left+highlight_width/2 ,
 		        position: 'absolute'
 		    });
 		}

@@ -6,6 +6,10 @@
 	padding: 5px;
 	margin: 0;
 }
+
+.notable_block p{
+	margin: 0;
+}
 .notable_block.active{
 	display:block;
 }

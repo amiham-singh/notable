@@ -3,7 +3,7 @@
 	background:rgba(235,235,235,0.8);
 	border-radius: 5px;
 	width: 200px;
-	padding: 10px;
+	/*padding: 10px;*/
 }
 .notable_block.active{
 	display:block;

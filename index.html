@@ -47,12 +47,10 @@
 		
 	</script>
 	<script type="text/jst" id ="embed-tooltip">
-	<span class = "notable_highlight" data-which = '<%= generated_id %>'> <%= highlight %>
-		</span>
-		<div class = 'notable_block'  data-which = '<%= generated_id %>'>
-			<h1><%= heading %></h1>
-			<img class = 'notable_blockimg' src='<%= media %>'>
-			<p><%= desc %></p>
+		<div class = 'notable_outerbox' data-which = '<%= generated_id %>'>
+<span class = "notable_highlight" data-which = '<%= generated_id %>'><%= highlight %></span><div class = 'notable_block' data-which = '<%= generated_id %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>
+		</div>
+		<div class = 'notable_embedcode' data-which = '<%= generated_id %>'>
 		</div>
 	</script>
 

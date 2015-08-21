@@ -1,10 +1,26 @@
 (function(){
 
 	var public_spreadsheet_url
-	var requestURL = document.getElementById("notable-app-source-box").getAttribute("src");
-	public_spreadsheet_url = requestURL.split('?sheetURL=')[1]
+
+	function makeurl(){
+		var requestURL = document.getElementById("notable-app-source-box").getAttribute("src");
+		public_spreadsheet_url = requestURL.split('?sheetURL=')[1]
+
+	}
 
 	var notabledata;
+
+	// if (window.location.href ="http://localhost:9090/"){
+	// 	$('#submit').on('click',function(){
+	// 		makeurl();
+	// 		init()
+	// 	})
+	// // } else{
+		$(document).ready(function(){
+			makeurl();
+			init()
+		})
+	// }
 
 	function init() {
     Tabletop.init( { key: public_spreadsheet_url,

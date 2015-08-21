@@ -3,7 +3,7 @@
 	var public_spreadsheet_url
 
 	function makeurl(){
-		var requestURL = document.getElementById("notable-app-source-box").getAttribute("sheetid");
+		var requestURL = $("notable-app-source-box").attr("sheetid");
 		public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/"+public_spreadsheet_id+"/pubhtml"
 	}
 

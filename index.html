@@ -10,52 +10,47 @@
 	<title>Notable</title>
 </head>
 <body>
+	<script id = 'embed-html-later'>
+	</script>
 	<!-- header -->
 	<div id = 'header'>
 		Notable
 	</div>
 	<!-- form for inputs -->
 	<form id = 'form'>
-		<div class = 'heading block'>
-			<span>Headline</span><input class = 'inputbox' type="text" id ="heading" value="">
-		</div>
-		<div class = 'media block'>
-			<span>Media</span><input class = 'inputbox' type="text" id ="media" value="">
-		</div>
-		<div class = 'link block'>
-			<span>Hyperlink</span><input class = 'inputbox' type="text" id ="link" value="">
-		</div>
-		<div class = 'desc block'>
-			<span>Description</span><textarea class = 'inputbox' maxlength="800" type="text" id ="desc" value=""></textarea>
-		</div>
-		<div class = 'highlight block'>
-			<span>Highlight text</span><input class = 'inputbox' type="text" id ="highlight" value="">
+		<div class = 'spreadsheet'>
+			<span>Enter link to Google spreadsheet here</span><input class = 'inputbox' type="text" id ="spreadsheet" value="">
 		</div>
 		<div id = 'submit'>Submit</div>
 
-
-
 	</form>
 	<!-- area for sample -->
-	<div id = 'sample-space' class = 'subheading'>
+	<div id = 'sample-space' class = 'invisible'>
 		<h2>Sample area begins below</h2>
+		<div id = 'topcode'>
+		</div>
+		<div id = 'sample'>
+		</div>
 	</div>
-	<div id = 'sample'>
+	<div id = 'notable-tooltip'>
 	</div>
 	<!-- templates start here -->
 	<script type="text/jst" id ="embed-highlight">
-		
+		<span class = "notable_highlight" notable-data-which = '<%= slug %>'><%= highlight %></span>
 	</script>
-	<script type="text/jst" id ="embed-tooltip">
-		<div class = 'notable_outerbox' data-which = '<%= generated_id %>'>
-<span class = "notable_highlight" data-which = '<%= generated_id %>'><%= highlight %></span><div class = 'notable_block' data-which = '<%= generated_id %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>
-		</div>
-		<div class = 'notable_embedcode' data-which = '<%= generated_id %>'>
+	<script type="text/jst" id ="embed-box-each">
+		<div class = 'notable_embed_box' notable-data-which = '<%= slug %>'>
+			<div class = 'notable_highlight_key notable_side'>
+			</div>
+			<div class = 'notable_embed_key notable_side'>
+				<textarea readonly></textarea>
+			</div>
 		</div>
 	</script>
 
 	<script type="text/javascript" src="js/thirdparty/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/thirdparty/underscore.min.js"></script>
+	<script type="text/javascript" src="js/thirdparty/tabletop.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/notable.app.js"></script>
 

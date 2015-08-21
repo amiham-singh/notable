@@ -1,17 +1,19 @@
-.notable_block{
+#notable-tooltip{
 	display: none;
 	background:rgba(235,235,235,0.9);
 	border-radius: 5px;
-	width: 200px;
-	padding: 5px;
+	width: 250px;
+	padding: 10px;
 	margin: 0;
 }
 
-.notable_block p{
+#notable-tooltip p{
 	margin: 0;
 }
-.notable_block.active{
-	display: inline-block
+
+
+#notable-tooltip.active{
+	display: block;
 }
 
 .notable_highlight{

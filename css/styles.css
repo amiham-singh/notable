@@ -6,8 +6,13 @@
 	margin: 0;
 }
 
+/*.notable_highlight{
+margin: 2em;
+	}*/
+
 span{
 	padding: 10px;
+	margin-right: 29px;
 }
 
 .subheading {

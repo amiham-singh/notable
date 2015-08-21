@@ -16,24 +16,10 @@
 	</div>
 	<!-- form for inputs -->
 	<form id = 'form'>
-		<div class = 'heading block'>
-			<span>Headline</span><input class = 'inputbox' type="text" id ="heading" value="">
-		</div>
-		<div class = 'media block'>
-			<span>Media</span><input class = 'inputbox' type="text" id ="media" value="">
-		</div>
-		<div class = 'link block'>
-			<span>Hyperlink</span><input class = 'inputbox' type="text" id ="link" value="">
-		</div>
-		<div class = 'desc block'>
-			<span>Description</span><textarea class = 'inputbox' maxlength="800" type="text" id ="desc" value=""></textarea>
-		</div>
-		<div class = 'highlight block'>
-			<span>Highlight text</span><input class = 'inputbox' type="text" id ="highlight" value="">
+		<div class = 'spreadsheet'>
+			<span>Enter spreadsheet link here</span><input class = 'inputbox' type="text" id ="spreadsheet" value="">
 		</div>
 		<div id = 'submit'>Submit</div>
-
-
 
 	</form>
 	<!-- area for sample -->
@@ -42,20 +28,19 @@
 	</div>
 	<div id = 'sample'>
 	</div>
+	<div id = 'notable-tooltip'>
+	</div>
 	<!-- templates start here -->
 	<script type="text/jst" id ="embed-highlight">
-		
+		<span class = "notable_highlight" data-which = '<%= slug %>'><%= highlight %></span>
 	</script>
 	<script type="text/jst" id ="embed-tooltip">
-		<div class = 'notable_outerbox' data-which = '<%= generated_id %>'>
-<span class = "notable_highlight" data-which = '<%= generated_id %>'><%= highlight %></span><div class = 'notable_block' data-which = '<%= generated_id %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>
-		</div>
-		<div class = 'notable_embedcode' data-which = '<%= generated_id %>'>
-		</div>
+		<div class = 'notable_block' data-which = '<%= slug %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>
 	</script>
 
 	<script type="text/javascript" src="js/thirdparty/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/thirdparty/underscore.min.js"></script>
+	<script type="text/javascript" src="js/thirdparty/tabletop.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/notable.app.js"></script>
 

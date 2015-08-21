@@ -1,19 +1,13 @@
 (function(){
-	var status = {}
 
-	var embed_html = $('#embed-tooltip').html().trim();
+	var public_spreadsheet_url;
+
+	var embed_html = $('#embed-highlight').html().trim();
 	var embed_TF = _.template(embed_html);
 
 	$('#submit').on('click',function(){
-		status.heading = $('#heading').val();
-		status.media = $('#media').val();
-		status.link = $('#link').val();
-		status.desc = $('#desc').val().trim();
-		status.highlight = $('#highlight').val();
-		status.generated_id = guidGenerator();
-		$('#sample').append(embed_TF(status));
-		$('.notable_embedcode[data-which='+status.generated_id+']').append('<textarea  readonly="readonly">'+$('.notable_outerbox[data-which='+status.generated_id+']').html().toString()+'</textarea>');
-		console.log(status)
+	public_spreadsheet_url = $('#spreadsheet').val();
+  		init();
 	});
 
 	function guidGenerator() {
@@ -22,5 +16,21 @@
 	    };
 	    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
 	};
+
+	function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: generateData,
+                     simpleSheet: true } )
+	 }
+
+	  function generateData(data, tabletop) {
+	    genStuff(data);
+	  }
+
+	  function genStuff(data){
+	  	data.forEach(function(obj){
+	  		$('#sample').append(embed_TF(obj))
+	  	})
+	  }
 
 }).call(this);

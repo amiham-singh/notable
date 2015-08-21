@@ -4,8 +4,8 @@
 
 	function makeurl(){
 		var requestURL = document.getElementById("notable-app-source-box").getAttribute("src");
-		public_spreadsheet_url = requestURL.split('?sheetURL=')[1]
-
+		var public_spreadsheet_id = requestURL.split('?sheetURL=')[1]
+		public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/"+public_spreadsheet_id+"/pubhtml"
 	}
 
 	var notabledata;

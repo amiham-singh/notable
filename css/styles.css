@@ -6,6 +6,22 @@
 	margin: 0;
 }
 
+.visible.invisible{
+	display: block;
+}
+.invisible{
+	display: none
+}
+
+.notable_side{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.notable_embed_box{
+	margin-bottom: 10px;
+}
+
 /*.notable_highlight{
 margin: 2em;
 	}*/

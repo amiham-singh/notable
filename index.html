@@ -10,6 +10,8 @@
 	<title>Notable</title>
 </head>
 <body>
+	<script id = 'embed-html-later'>
+	</script>
 	<!-- header -->
 	<div id = 'header'>
 		Notable
@@ -17,25 +19,33 @@
 	<!-- form for inputs -->
 	<form id = 'form'>
 		<div class = 'spreadsheet'>
-			<span>Enter spreadsheet link here</span><input class = 'inputbox' type="text" id ="spreadsheet" value="">
+			<span>Enter link to Google spreadsheet here</span><input class = 'inputbox' type="text" id ="spreadsheet" value="">
 		</div>
 		<div id = 'submit'>Submit</div>
 
 	</form>
 	<!-- area for sample -->
-	<div id = 'sample-space' class = 'subheading'>
+	<div id = 'sample-space' class = 'invisible'>
 		<h2>Sample area begins below</h2>
-	</div>
-	<div id = 'sample'>
+		<div id = 'topcode'>
+		</div>
+		<div id = 'sample'>
+		</div>
 	</div>
 	<div id = 'notable-tooltip'>
 	</div>
 	<!-- templates start here -->
 	<script type="text/jst" id ="embed-highlight">
-		<span class = "notable_highlight" data-which = '<%= slug %>'><%= highlight %></span>
+		<span class = "notable_highlight" notable-data-which = '<%= slug %>'><%= highlight %></span>
 	</script>
-	<script type="text/jst" id ="embed-tooltip">
-		<div class = 'notable_block' data-which = '<%= slug %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>
+	<script type="text/jst" id ="embed-box-each">
+		<div class = 'notable_embed_box' notable-data-which = '<%= slug %>'>
+			<div class = 'notable_highlight_key notable_side'>
+			</div>
+			<div class = 'notable_embed_key notable_side'>
+				<textarea readonly></textarea>
+			</div>
+		</div>
 	</script>
 
 	<script type="text/javascript" src="js/thirdparty/jquery-1.11.1.min.js"></script>

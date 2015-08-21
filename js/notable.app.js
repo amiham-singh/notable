@@ -1,23 +1,10 @@
 (function(){
 
+	var public_spreadsheet_url
+	var requestURL = document.getElementById("notable-app-source-box").getAttribute("src");
+	public_spreadsheet_url = requestURL.split('?sheetURL=')[1]
+
 	var notabledata;
-
-	var public_spreadsheet_url;
-
-	var embed_html = $('#embed-tooltip').html().trim();
-	var embed_TF = _.template(embed_html);
-
-	$('#submit').on('click',function(){
-	public_spreadsheet_url = $('#spreadsheet').val();
-  		init();
-	});
-
-	function guidGenerator() {
-	    var S4 = function() {
-	       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-	    };
-	    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
-	};
 
 	function init() {
     Tabletop.init( { key: public_spreadsheet_url,
@@ -33,13 +20,13 @@
 	  	notabledata = data;
 	  }
 
-	var embed_html = $('#embed-tooltip').html().trim();
+	var embed_html = "<div class = 'notable_block' notable-data-which = '<%= slug %>'><% if (heading){ %><h1><%= heading %></h1><%}%><% if (media){ %><img class = 'notable_blockimg' src='<%= media %>'><%}%><% if (desc){ %><p><%= desc %></p><%}%></div>";
 	var embed_TF = _.template(embed_html);
 
 	var tooltip_height,tooltip_width, x, buffery = 10,bufferx = 10;
 
 	$(document).on('mouseover','.notable_highlight', function() { 
-		x = $(this).attr('data-which');
+		x = $(this).attr('notable-data-which');
 		console.log(x)
 		$('#notable-tooltip').attr('data-active-code',x)
 		bakenotableTooltip();

@@ -36,7 +36,7 @@
 	
 	
 	 function genTop(){
-	 	var code = "<div class = 'notable_embed_key'><textarea readonly><script id = 'notable-app-source-box' src='>"+srclink+"?sheetURL=public_spreadsheet_url"+"</script></textarea></div>"
+	 	var code = "<div class = 'notable_embed_key'><textarea readonly><script id = 'notable-app-source-box' src='"+srclink+"?sheetURL="+public_spreadsheet_url+"></script></textarea></div>"
 	  	return code;
 	  }
 

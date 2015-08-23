@@ -12,7 +12,7 @@ While bigger newsrooms like NYT and the Washington Post are working on using sop
 
 * Step 1: Create a Google spreadsheet with your content based on this template.
 * Step 2: Go to File -> Publish to the web and copy the link.
-* Step 3: Head over to the [Notable website](www.gurmanbh.github.io/notable) and paste the link. Notable generates embed codes for your story.
+* Step 3: Head over to the [Notable website](//gurmanbh.github.io/notable) and paste the link. Notable generates embed codes for your story.
 * Step 4: Insert the embed codes at appropriate portions of the story. And, Voila! You have an annotated story ready for you.
 
 ###The developer way.

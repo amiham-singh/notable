@@ -89,7 +89,7 @@ input:focus , textarea#desc:focus{
 }
 
 textarea{
-	width: 220px;
+	width: 250px;
 	height: 100px;
 	resize: none;
 }

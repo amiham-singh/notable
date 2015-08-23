@@ -6,6 +6,15 @@
 	margin: 0;
 }
 
+body{
+	padding-bottom: 5em;
+}
+
+#sampleinstructions{
+	padding-top: 2em;
+	width: 500px;
+}
+
 #sample-space{
 	padding-left: 1.5em;
 	padding-top: 1em;
@@ -87,7 +96,7 @@ textarea{
 	padding-top: 15px;
 	border-radius: 5px;
 	margin-top: 2em;
-	margin-left: 20px;
+	margin-left: 1em;
 }
 
 #submit:hover {
@@ -96,7 +105,7 @@ textarea{
 }
 
 #form{
-	padding-left: 2em;
+	padding-left: 1em;
 	padding-top: 2em;
 }
 

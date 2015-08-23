@@ -3,7 +3,7 @@
 
 	var public_spreadsheet_url;
 
-	var srclink = "/js/notable.app.js"
+	var srclink = "//www.gurmanbhatia.com/notable/notable.app.js"
 
 	var highlight_template = $('#embed-highlight').html().trim();
 	var highlight_TF = _.template(highlight_template);

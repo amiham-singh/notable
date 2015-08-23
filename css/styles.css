@@ -6,6 +6,11 @@
 	margin: 0;
 }
 
+#sample-space{
+	padding-left: 1.5em;
+	padding-top: 1em;
+}
+
 .visible.invisible{
 	display: block;
 }
@@ -21,10 +26,6 @@
 .notable_embed_box{
 	margin-bottom: 10px;
 }
-
-/*.notable_highlight{
-margin: 2em;
-	}*/
 
 span{
 	padding: 10px;
@@ -100,5 +101,5 @@ textarea{
 }
 
 #sample{
-	padding: 2em;
+	padding-top: 2em;
 }

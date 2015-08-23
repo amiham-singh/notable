@@ -9,17 +9,10 @@
 
 	var notabledata;
 
-	// if (window.location.href ="http://localhost:9090/"){
-	// 	$('#submit').on('click',function(){
-	// 		makeurl();
-	// 		init()
-	// 	})
-	// // } else{
 		$(document).ready(function(){
 			makeurl();
 			init()
 		})
-	// }
 
 	function init() {
     Tabletop.init( { key: public_spreadsheet_url,
@@ -42,7 +35,6 @@
 
 	$(document).on('mouseover','.notable_highlight', function() { 
 		x = $(this).attr('notable-data-which');
-		console.log(x)
 		$('#notable-tooltip').attr('data-active-code',x)
 		bakenotableTooltip();
 	});

@@ -19,4 +19,7 @@ While bigger newsrooms like NYT and the Washington Post are working on using sop
 
 Notable is open source, feel free to fork and tweak. Eventually, the aim is to give users options to use more stable data sources such as a csv/json loaded on their private server.
 
+##Credits
+By Gurman Bhatia.
+
 Built using jQuery, Underscore and Tabletop.

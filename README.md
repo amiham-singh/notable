@@ -15,8 +15,8 @@ While bigger newsrooms like NYT and the Washington Post are working on using sop
 * Step 3: Head over to the [Notable website](//gurmanbh.github.io/notable) and paste the link. Notable generates embed codes for your story.
 * Step 4: Insert the embed codes at appropriate portions of the story. And, Voila! You have an annotated story ready for you.
 
-###The developer way.
+###The developer way
 
-Notable is opensource, feel free to fork and tweak. Eventually, the aim is to give users options to use more stable data sources such as a csv/json loaded on their private server.
+Notable is open source, feel free to fork and tweak. Eventually, the aim is to give users options to use more stable data sources such as a csv/json loaded on their private server.
 
 Built using jQuery, Underscore and Tabletop.

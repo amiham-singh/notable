@@ -18,6 +18,8 @@
 	var embed_TF = _.template(embed_html);
 
 	$('#submit').on('click',function(){
+		$('#sample').html('');
+		$('#topcode').html('');
 		public_spreadsheet_url = $('#spreadsheet').val();
 		public_spreadsheet_id = public_spreadsheet_url.split('spreadsheets/d/')[1].split('/pubhtml')[0]
 		$('#embed-html-later').html("<script id = 'notable-app-source-box' src='"+srclink+"' sheetid='"+public_spreadsheet_id+"'></script>")

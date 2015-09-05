@@ -6,7 +6,7 @@ Notable is a prototype for inline annotation styling for publishers.
 
 While bigger newsrooms like NYT and the Washington Post are working on using sophisticated ways towards building long form annotated content, smaller publications that don't have the developer/reporter hybrid residing in the newsroom, can't often build packages like that. 'Notable' is a project to fill that void. Inspired by the way Knight lab makes its open source tools accessible to journalists without core programming skills, it is powered by Google Spreadsheets - which though isn't a 'sustainable' solution (thanks to the Sheets API breaking so often!), it is still an 'accessible' solution.
 
-As a sample, I [annotated my CV using notable](//gurmanbhatia.com/notable/notable-resume.html).
+As a sample, I [annotated my CV using notable](http://gurmanbhatia.com/notable/notable-resume.html).
 
 ##How to use it?
 

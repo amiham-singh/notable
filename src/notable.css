@@ -2,17 +2,17 @@
 	display: none;
 	background:rgba(235,235,235,0.9);
 	border-radius: 5px;
-	width: 250px;
+	width: 280px;
 	padding: 1em;
 	margin: 0;
 	z-index: 99;
 	line-height: 1.5em;
+    position:absolute;
 }
 
 #notable-tooltip p{
 	margin: 0;
 }
-
 
 #notable-tooltip.active{
 	display: block;
@@ -29,13 +29,11 @@
 
 .notable_blockimg{
 	display: block;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
+	width: 45%;
+    float:left;
+    margin-right: 1em;
+    margin-bottom: 1em;
 
-img.notable_blockimg{
-	
 }
 
 .notable_block h1{
@@ -43,6 +41,48 @@ img.notable_blockimg{
 	margin: 0;
 }
 
-.notable_center{
-	text-align: center;
+#notable-tooltip-mobile{
+    display: none;
+     background-color: rgba(256,256,256,0.9);
+    font-size: 1.1em;
+}
+
+#notable-tooltip-mobile.active{
+    display: block;
+    position: absolute;
+    z-index: 12000;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    margin:0;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+#overlay{
+  pointer-events:none;
+    z-index:10000;
+    position:fixed;
+    top:0;
+    left:0;
+    width:3000px;
+    height:3000px;
+    background-color:rgba(255,255,255,.6);
+    opacity:0;
+    transition:opacity .5s
+}
+
+#overlay.active{
+    opacity:1;
+    pointer-events:inherit
+}
+#close {
+    width: 1em;
+    height: auto;
+    position: absolute;
+    top: 0.5em;
+    left: 90%; 
+}
+#close:hover{
+    cursor: pointer
 }
